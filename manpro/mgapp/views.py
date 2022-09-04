@@ -107,14 +107,6 @@ def index(request):
         email = request.POST.get('email')
         message = request.POST.get('message')
     
-        send_mail(
-            f'message from {email}',
-            "From " , name ,"email is", email ,"message is ", message   ,
-            settings.EMAIL_HOST_USER,
-            ['mohamedhani2003287@gmail.com'],
-            fail_silently=False,
-        )
-        messages.success(request ,"Thanks For Contact With US ❤ ")
 
     context = {
         'ss' : ss,
